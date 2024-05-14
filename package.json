@@ -1,7 +1,8 @@
 {
 	"name": "template-npm-pub-ts",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"description": "Template repo for creating public packages written in typescript. Lintable, testable and releasable.",
+	"type": "module",
 	"scripts": {
 		"prerelease": "npm run lint & npm run build & npm run test",
 		"test": "npx mocha --require tsx ./test/**/*.test.ts",

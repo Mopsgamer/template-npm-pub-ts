@@ -1,10 +1,12 @@
 # template
 
-description
+> Don't forget to configure the keywords and files in 'package.json', reinitialize the package using 'npm init', and specify the paths in 'tsconfig.json' and 'eslint.config.mjs'.
+
+...Description...
 
 ## Features
 
-- [x] use template repo
+...Features...
 
 ## Install
 
@@ -12,4 +14,6 @@ description
 npm i ...
 ```
 
-> Don't forget to configure the keywords and files in 'package.json', reinitialize the package using 'npm init', and specify the paths in 'tsconfig.json' and 'eslint.config.mjs'.
+## Usage
+
+...Usage or API...
