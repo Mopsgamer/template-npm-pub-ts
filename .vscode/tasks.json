@@ -56,5 +56,16 @@
 			"label": "Lint",
 			"detail": "npx eslint . --fix"
 		},
+		{
+			"icon": {
+				"id": "check-all",
+				"color": "terminal.ansiWhite"
+			},
+			"type": "npm",
+			"script": "test",
+			"problemMatcher": [],
+			"label": "Test",
+			"detail": "npx mocha --require tsx ./test/**/*.test.ts"
+		},
 	]
 }
