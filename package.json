@@ -4,7 +4,7 @@
 	"description": "Template repo for creating public packages written in typescript. Lintable, testable and releasable.",
 	"type": "module",
 	"scripts": {
-		"prerelease": "pnpm lint & pnpm build & pnpm test",
+		"prerelease": "pnpm lint && pnpm build & pnpm test",
 		"test": "pnpm mocha --require tsx ./test/**/*.test.ts",
 		"build": "pnpm tsc",
 		"lint": "pnpm eslint .",
