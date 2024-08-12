@@ -14,7 +14,7 @@
 		{
 			"icon": {
 				"id": "versions",
-				"color": "terminal.ansiGreen"
+				"color": "terminal.ansiYellow"
 			},
 			"type": "npm",
 			"script": "release:minor",
@@ -24,7 +24,7 @@
 		{
 			"icon": {
 				"id": "versions",
-				"color": "terminal.ansiYellow"
+				"color": "terminal.ansiGreen"
 			},
 			"type": "npm",
 			"script": "release:patch",
