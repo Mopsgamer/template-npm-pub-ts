@@ -4,21 +4,32 @@
 	"description": "Template repo for creating public packages written in typescript. Lintable, testable and releasable.",
 	"type": "module",
 	"scripts": {
-		"prerelease": "pnpm lint && pnpm build && pnpm test",
-		"test": "pnpm mocha --require tsx ./test/**/*.test.ts",
-		"build": "pnpm tsc",
-		"lint": "pnpm eslint .",
-		"lint:fix": "pnpm eslint . --fix",
+		"prerelease": "pnpm lint && pnpm build:pub && pnpm test",
+		"postinstall": "pnpm run build",
+		"test": "pnpm mocha ./out/test/**/*.test.js",
+		"build": "pnpm shx rm -rf out && pnpm tsc",
+		"build:pub": "pnpm shx rm -rf out && pnpm tsc --sourceMap false",
+		"build:watch": "pnpm tsc --watch",
+		"lint": "pnpm xo",
+		"lint:fix": "pnpm xo --fix",
 		"release:major": "pnpm release-it --increment=major",
 		"release:minor": "pnpm release-it --increment=minor",
 		"release:patch": "pnpm release-it --increment=patch"
 	},
 	"author": "Mopsgamer",
 	"license": "ISC",
-	"main": "./lib/index.js",
+	"main": "./out/src/index.js",
 	"files": [
-		"lib"
+		"out/src"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Mopsgamer/template-npm-pub-ts.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Mopsgamer/template-npm-pub-ts/issues"
+	},
+	"homepage": "https://github.com/Mopsgamer/template-npm-pub-ts",
 	"release-it": {
 		"hooks": {
 			"before:init": "pnpm prerelease"
@@ -41,18 +52,21 @@
 		"access": "public"
 	},
 	"directories": {
-		"lib": "lib"
+		"lib": "out/src"
+	},
+	"dependencies": {
+		"tslib": "^2.6.3"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.4.0",
 		"@release-it/keep-a-changelog": "^5.0.0",
-		"eslint": "^8.57.0",
-		"eslint-plugin-only-warn": "^1.1.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^20.14.2",
 		"globals": "^15.4.0",
 		"mocha": "^10.4.0",
-		"release-it": "^17.2.1",
-		"tsx": "^4.15.1",
+		"release-it": "^17.3.0",
+		"shx": "^0.3.4",
 		"typescript": "^5.4.5",
-		"typescript-eslint": "^7.12.0"
-	}
+		"xo": "^0.59.3"
+	},
+	"keywords": []
 }
