@@ -47,6 +47,19 @@
 			"publish": true
 		}
 	},
+	"xo": {
+		"ignores": "/out/",
+		"rules": {
+			"@typescript-eslint/promise-function-async": "off",
+			"@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
+			"@typescript-eslint/no-unused-vars": "error",
+			"n/no-unpublished-bin": "off",
+			"linebreak-style": [
+				"error",
+				"unix"
+			]
+		}
+	},
 	"publishConfig": {
 		"access": "public"
 	},
@@ -54,17 +67,17 @@
 		"lib": "out/src"
 	},
 	"dependencies": {
-		"tslib": "^2.6.3"
+		"tslib": "^2.7.0"
 	},
 	"devDependencies": {
 		"@release-it/keep-a-changelog": "^5.0.0",
 		"@types/mocha": "^10.0.7",
-		"@types/node": "^20.14.15",
+		"@types/node": "^20.16.5",
 		"globals": "^15.9.0",
 		"mocha": "^10.7.3",
 		"release-it": "^17.6.0",
 		"shx": "^0.3.4",
-		"typescript": "^5.5.4",
+		"typescript": "^5.6.2",
 		"xo": "^0.59.3"
 	},
 	"keywords": []
