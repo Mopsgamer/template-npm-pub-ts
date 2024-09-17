@@ -16,10 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 
-## [0.0.0]
+## [0.0.1]
 
 Initial Release
-
-### Functionality
-
- - Basic linting, testing and compiling.
